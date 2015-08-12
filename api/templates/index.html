@@ -3,87 +3,134 @@
     <head>
         <title>Check This Site</title>
 
+        <!-- load styles and resources -->
         {% load staticfiles %}
-
         <link href="{% static 'img/favicon.ico' %}" type="image/x-icon" rel="icon">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+        <!-- load scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 
     </head>
 
     <body>
+
+
+        <div id="nav-header">
+            <a href="/">
+                <img src="{% static 'img/logo.png' %}" alt="Check This Site Logo" class="logo">
+            </a>
+
+            <!-- right side -->
+
+            <div class="nav-item" id="about">
+                <i class="fa fa-question fa nav-icon"></i>
+                <p>
+                    About
+                </p>
+            </div>
+            <div class="nav-item" id="resources">
+                <i class="fa fa-book fa nav-icon"></i>
+                <p>
+                    Resources
+                </p>
+            </div>
+            <div class="nav-item" id="lookup">
+                <i class="fa fa-search fa nav-icon"></i>
+                <p>
+                    Lookup a Site
+                </p>
+            </div>
+        </div>
+
         <header>
             <i>CHECK THIS SITE</i>
         </header>
 
         <div class="wrapper">
 
-            <div id="left-panel">
-                <h3>
-                    MULTI-FACTOR AUTHENTICATION
-                </h3>
-                <p>
-                    Multi-factor Authentication (MFA) is a way to keep your personal information secure online. By verifying that you are actually you, websites that use MFA help cut down on identity theft and loss of personal data.
-                </p>
+            <div id="lookup-content" class="content">
+                <div class="left-panel">
+                    left panel
+                </div>
 
-                <h3>
-                    WHY AUTHENTICATION?
-                </h3>
+                <div class="right-panel">
+                    right panel
+                </div>
 
-                <p>
-                    If a website does not offer MFA, all an identity thief needs to do to gain access to your account is enter your username and password. MFA provides a next step by checking that you -- and only you -- are trying to access your information.
-
-                    For example, a site may send a text message directly to your phone. This message contains a short number that you then enter into the website as part of the login process. Because identity thiefs don't have your phone, they won't know the number to enter and can't access your account!
-                </p>
             </div>
-        </div>
 
-        <div id="right-panel">
 
-            <div id="toggleDiv">
-                <div class="inner rotate">
-                        <h4>
-                            RESOURCES
-                        </h4>
-                    <hr>
+            <div id="resources-content" class="content">
+                <div class="left-panel">
+                    left panel
+                </div>
+
+                <div class="right-panel">
+                    <ul>
+                        <li>
+                            <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" target="_blank">
+                                'Is It Safe' browser extension for Google Chrome
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twofactorauth.org" target="_blank">
+                                Two Factor Auth
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.nist.gov/nstic/" target="_blank">
+                                National Strategy for Trusted Identities in Cyberspace
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.staysafeonline.org/" target="_blank">
+                                National Cyber Security Alliance
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stopthinkconnect.org" target="_blank">
+                                STOP. THINK. CONNECT.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+            <div id="about-content" class="content">
+                <div class="left-panel">
+                    <h3>
+                        MULTI-FACTOR AUTHENTICATION
+                    </h3>
+                    <p>
+                        Multi-factor Authentication (MFA) is a way to keep your personal information secure online. By verifying that you are actually you, websites that use MFA help cut down on identity theft and loss of personal data.
+                    </p>
+
+                    <h3>
+                        WHY AUTHENTICATION?
+                    </h3>
+
+                    <p>
+                        If a website does not offer MFA, all an identity thief needs to do to gain access to your account is enter your username and password. MFA provides a next step by checking that you -- and only you -- are trying to access your information.
+
+                        For example, a site may send a text message directly to your phone. This message contains a short number that you then enter into the website as part of the login process. Because identity thiefs don't have your phone, they won't know the number to enter and can't access your account!
+                    </p>
+                </div>
+
+                <div class="right-panel">
+                    right panel
                 </div>
             </div>
 
-            <div id="right-content">
-            <ul>
-                <li>
-                    <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" target="_blank">
-                        'Is It Safe' browser extension for Google Chrome
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.twofactorauth.org" target="_blank">
-                        Two Factor Auth
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.nist.gov/nstic/" target="_blank">
-                        National Strategy for Trusted Identities in Cyberspace
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.staysafeonline.org/" target="_blank">
-                        National Cyber Security Alliance
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.stopthinkconnect.org" target="_blank">
-                        STOP. THINK. CONNECT.
-                    </a>
-                </li>
-            </ul>
-            </div>
-        </div>
 
-
+        </div> <!-- end wrapper -->
 
     </body>
 

@@ -1,5 +1,3 @@
-# Two Factor Frenzy
+# Check This Site
 
-Helping users stay safe online.
-
-Learn more at [Check This Site](http://www.checkthis.site) 
+Learn more about the security practices of the websites you visit at [CheckThis.Site](http://www.checkthis.site) 

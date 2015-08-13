@@ -32,6 +32,15 @@ a:hover {
     color: white;
 }
 
+.top-buffer {
+    margin-top: 2vh;
+}
+
+.hidden {
+    display: none;
+}
+
+
 /*
  * NAVIGATION BAR
  */
@@ -42,8 +51,6 @@ a:hover {
 
     font-size: 1.2em;
     background: rgba(255,255,255,0.3);
-    /*background-color: white;*/
-    /*border-bottom: 2px solid grey;*/
     margin:0;
 
     -moz-box-shadow: 1px 1px 10px 1px grey;
@@ -58,6 +65,7 @@ a:hover {
     text-align: center;
     float: right;
     display: inline-block;
+    cursor: pointer;
 }
 
 .nav-item p {
@@ -75,46 +83,67 @@ a:hover {
 }
 
 /*
- * INDEX, "more info" page
+ * PAGE STYLES
  */
 
- .wrapper {
-     width: 100vw;
-     margin: 0 auto;
- }
+/* general page styling */
 
- .left-panel {
-     float: left;
-     width: 40%;
-     background-color: #cdcdcd;
- }
+.wrapper {
+    width: 100vw;
+    margin: 0 auto;
+}
 
-
- .right-panel {
-     float: right;
-     width: 40%;
-     background: rgba(0,0,0,0.1);
-
-     -moz-box-shadow: 1px 3px 10px 1px grey;
-     -webkit-box-shadow: 1px 3px 10px 1px grey;
-     box-shadow: 1px 3px 10px 2px grey;
-
-     border-top-left-radius: 5px;
-     border-bottom-left-radius: 5px;
- }
+.left-panel {
+    float: left;
+    width: 40%;
+    background-color: #cdcdcd;
+}
 
 
-#toggleDiv {
-    width: 15%;
-    height: 45vh;
+.right-panel {
+    float: right;
+    width: 40%;
+
+    /*font-size: 1.4vw;*/
+    background: rgba(0,0,0,0.1);
+
+    -moz-box-shadow: 1px 3px 10px 1px grey;
+    -webkit-box-shadow: 1px 3px 10px 1px grey;
+    box-shadow: 1px 3px 10px 2px grey;
 
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-
-    position: absolute;
-    display: inline-block;
-    top: 0; left: 0;
 }
+
+
+/* lookup page styling */
+
+#lookup-content {
+    width: 50%;
+}
+
+.input-text {
+    height: 7vh;
+    width: 77%;
+    margin-left: .1vw;
+    font-size: 2em;
+    padding: 0 .3em;
+}
+
+
+
+/* resources page styling */
+
+
+
+/* about page styling */
+/*#about-content {
+    float: left;
+    margin-left: 5%;
+    width: 55%;
+    display: block;
+}*/
+
 
 
 
@@ -189,15 +218,14 @@ tr:nth-child(odd) {background: #D1EDD4}
 .btn {
     display: inline-block;
     text-align: center;
-    font-size: 14px;
+    font-size: 1.5em;
     vertical-align: middle;
-    line-height: 40px;
 
     outline: none;
 
-    width: 48%;
-    height: 40px;
-    margin-bottom: 10px;
+    width: 30vw;
+    height: 8vh;
+    margin-bottom: 1vh;
 
     cursor: pointer;
 
@@ -231,8 +259,8 @@ tr:nth-child(odd) {background: #D1EDD4}
     background-color: #91B8D8;
 }
 
-.wide{
-    width: 98%;
+.wide {
+    width: 80%;
 }
 
 .btn:hover {
@@ -250,14 +278,6 @@ i {
 
 .fa {
     vertical-align: middle;
-}
-
-.fa-check {
-    color: green;
-}
-
-.fa-ban {
-    color: red;
 }
 
 .fa-search {

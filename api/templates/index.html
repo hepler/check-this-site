@@ -55,11 +55,86 @@
 
             <div id="lookup-content" class="content">
                 <div class="left-panel">
-                    left panel
+                    <input id="lookup-site" class="input-text top-buffer" name="input" placeholder="lookup website">
+                    <br/>
+                    <button id="lookup-btn" class="btn btn-green wide top-buffer">CHECK THIS SITE</button>
                 </div>
 
                 <div class="right-panel">
-                    right panel
+                    <div id="lookupheader"></div>
+
+
+            		<!-- pre loader -->
+            		<div id="loading">
+            			<i class="fa fa-cog fa-spin fa-5x"></i>
+            		</div>
+
+
+                    <!-- display either site stats or the "add site" view -->
+                    <div id="site-report">
+
+            			<div id="site-info-header" class="info-wrapper hidden">
+            		        <div id="site-info" class="box-shadow">
+            					<div id="site-name"></div>
+            					<div id="site-logo">
+            						<img id="logo" src="">
+            					</div>
+            				</div>
+            	        </div>
+
+
+                        <!-- site info found successfully -->
+                        <div id="success" class="hidden">
+            	        <div id="site-report" class="info-wrapper">
+            	            <div id="sms" class="report-item box-shadow">
+            	                <span>SMS</span>
+            	                <span class="support"></span>
+            	            </div>
+            	            <div id="phone_call" class="report-item box-shadow">
+            	                <span>Phone Call</span>
+            	                <span class="support"></span>
+            	            </div>
+            	            <div id="email" class="report-item box-shadow">
+            	                <span>Email</span>
+            	                <span class="support"></span>
+            	            </div>
+            	            <div id="hardware_token" class="report-item box-shadow">
+            	                <span>Hardware Token</span>
+            	                <span class="support"></span>
+            	            </div>
+            	            <div id="software_implementation" class="report-item box-shadow">
+            	                <span>Software</span>
+            	                <span class="support"></span>
+            	            </div>
+            				<div id="sha_status" class="last report-item box-shadow">
+            	                <span>SHA-2 Encryption</span>
+            	                <span class="support"></span>
+            	            </div>
+            	        </div>
+                        <div id="no-mfa" class="hidden">
+                            <a class="btn btn-red wide" href="" target="_blank"><i class="fa fa-twitter fa-2x"></i> Tell them to support MFA!</a>
+                        </div>
+                        </div>
+
+
+                        <!-- no site data found -->
+                        <div id="no-success" class="info-wrapper hidden">
+                        <div id="no-data" class="report-item box-shadow">
+            	            <h1><i>oh no!</i></h1>
+                            <p>
+                                Looks like we don't have <br/>data for this site yet.
+                            </p>
+                            <div id="add-site" class="btn btn-blue wide"><i class="fa fa-plus fa-lg"></i> add this site</div>
+                            <p>
+                                Click the button above to <br/>submit this site.
+                            </p>
+            	        </div>
+                        <div id="submitted" class="hidden last report-item box-shadow">
+                            Thank you for submitting!
+                        </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -67,7 +142,7 @@
 
             <div id="resources-content" class="content">
                 <div class="left-panel">
-                    left panel
+                    this is the left panel!
                 </div>
 
                 <div class="right-panel">
@@ -125,7 +200,7 @@
                 </div>
 
                 <div class="right-panel">
-                    right panel
+                    this is the right panel!
                 </div>
             </div>
 

@@ -11,7 +11,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
 
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color: #0C5215;
 }
 
@@ -32,45 +32,77 @@ a:hover {
     color: white;
 }
 
+/*
+ * NAVIGATION BAR
+ */
+
+#nav-header {
+    height: 10vh;
+    width: 100%;
+
+    font-size: 1.2em;
+    background: rgba(255,255,255,0.3);
+    /*background-color: white;*/
+    /*border-bottom: 2px solid grey;*/
+    margin:0;
+
+    -moz-box-shadow: 1px 1px 10px 1px grey;
+    -webkit-box-shadow: 1px 1px 10px 1px grey;
+    box-shadow: 1px 1px 10px 2px grey;
+}
+
+.nav-item {
+    width: 10vw;
+    height: 10vh;
+    padding: 0 2vw;
+    text-align: center;
+    float: right;
+    display: inline-block;
+}
+
+.nav-item p {
+    margin: 0.2vh 0 0 0;
+}
+
+.nav-item:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 10vh;
+    height: auto;
+    padding: 0 2vw;
+}
 
 /*
  * INDEX, "more info" page
  */
 
-.wrapper {
-    width: 100%;
-    margin: 0 auto;
-}
+ .wrapper {
+     width: 100vw;
+     margin: 0 auto;
+ }
 
-#left-panel {
-    float: left;
-    margin-left: 5%;
-    width: 55%;
-    display: block;
-}
+ .left-panel {
+     float: left;
+     width: 40%;
+     background-color: #cdcdcd;
+ }
 
-/* the resources panel */
-#right-panel {
-    float: right;
-    font-size: 1.4vw;
-    background: rgba(0,0,0,0.1);
 
-    -moz-box-shadow: 1px 3px 10px 1px grey;
-    -webkit-box-shadow: 1px 3px 10px 1px grey;
-    box-shadow: 1px 3px 10px 2px grey;
+ .right-panel {
+     float: right;
+     width: 40%;
+     background: rgba(0,0,0,0.1);
 
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+     -moz-box-shadow: 1px 3px 10px 1px grey;
+     -webkit-box-shadow: 1px 3px 10px 1px grey;
+     box-shadow: 1px 3px 10px 2px grey;
 
-    width: 30vw;
-    height: 45vh;
+     border-top-left-radius: 5px;
+     border-bottom-left-radius: 5px;
+ }
 
-    position: absolute;
-
-    right:-30vw;
-    padding-left: 5vw;
-
-}
 
 #toggleDiv {
     width: 15%;
@@ -84,38 +116,6 @@ a:hover {
     top: 0; left: 0;
 }
 
-/* help from http://stackoverflow.com/questions/15138723/vertically-center-rotated-text-with-css */
-.inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-
-.rotate {
-    -moz-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-    transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
-}
-
-#right-content {
-    margin-left: 15%;
-    height: 30vh;
-}
-
-#right-panel:hover {
-    background: rgba(0,0,0,0.08);
-}
-
-ul {
-    margin: 2vh 0;
-    padding: 1vh 0;
-}
-
-li {
-    margin: 1vh 1vw;
-    padding: 0.3vh 0;
-    list-style: square;
-}
 
 
 /*
@@ -237,4 +237,41 @@ tr:nth-child(odd) {background: #D1EDD4}
 
 .btn:hover {
     color: #333333;
+}
+
+
+/*
+ * icons
+ */
+
+i {
+    margin-right: 5px;
+}
+
+.fa {
+    vertical-align: middle;
+}
+
+.fa-check {
+    color: green;
+}
+
+.fa-ban {
+    color: red;
+}
+
+.fa-search {
+    color: #0C5215;
+}
+
+.fa-book {
+    color: #0C5215;
+}
+
+.fa-question {
+    color: #0C5215;
+}
+
+.nav-icon {
+    margin: 2vh 0 0 0;
 }

@@ -1,11 +1,11 @@
-$(function () {
-    var viewWidth = $(window).width() * .3;
-    var rightVal = -viewWidth;
+var DELAY = 200;
 
-    $("#toggleDiv").mouseenter(function () {
-        rightVal = (rightVal * - 1) - viewWidth;
-        $(this).parent().animate(
-            {right: rightVal + 'px'}, {queue: false, duration: 500}
-        );
+$(function() {
+    $('.content').hide();
+    $('#lookup-content').fadeIn(DELAY);
+
+    $('.nav-item').on('click', function() {
+        $('.content').hide();
+        $('#' + this.id + '-content').fadeIn(DELAY);
     });
 });

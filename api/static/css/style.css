@@ -17,8 +17,9 @@ body {
 
 header {
     text-align: center;
-    margin-left: -2vw;
-    font-size: 12vw;
+    margin: 0 0 -1vh -2vw;
+    padding: 0;
+    font-size: 10em;
     font-weight: bolder;
     color: #FFFFFF;
 }
@@ -50,8 +51,8 @@ a:hover {
     width: 100%;
 
     font-size: 1.2em;
-    background: rgba(255,255,255,0.3);
-    margin:0;
+    background: rgba(255,255,255,.5);
+    margin: 0;
 
     -moz-box-shadow: 1px 1px 10px 1px grey;
     -webkit-box-shadow: 1px 1px 10px 1px grey;
@@ -66,6 +67,7 @@ a:hover {
     float: right;
     display: inline-block;
     cursor: pointer;
+    border-left: 1px solid #dedede;
 }
 
 .nav-item p {
@@ -89,37 +91,54 @@ a:hover {
 /* general page styling */
 
 .wrapper {
-    width: 100vw;
+    width: 90vw;
     margin: 0 auto;
+    /*background-color: #bcbcbc;*/
+    height: 50%;
 }
 
 .left-panel {
     float: left;
-    width: 40%;
-    background-color: #cdcdcd;
+    width: 50%;
+    padding: 1em;
+    /*background-color: #cdcdcd;*/
 }
 
 
 .right-panel {
     float: right;
     width: 40%;
-
     /*font-size: 1.4vw;*/
-    background: rgba(0,0,0,0.1);
+}
 
+.box-shadow-full {
     -moz-box-shadow: 1px 3px 10px 1px grey;
     -webkit-box-shadow: 1px 3px 10px 1px grey;
     box-shadow: 1px 3px 10px 2px grey;
 
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px;
+}
+
+.clear-bg {
+    background: rgba(0,0,0,0.07);
+    border-radius: 5px;
 }
 
 
 /* lookup page styling */
 
-#lookup-content {
-    width: 50%;
+#lookup-header {
+    width: 100%;
+    /*background-color: orange;*/
+    font-size: 1.5em;
+    text-align: center;
+    margin: 2vh 0;
+}
+
+#lookup-form {
+    /*margin: 0 5vw;*/
+    text-align: center;
+    /*width: 40vw;*/
 }
 
 .input-text {
@@ -132,11 +151,23 @@ a:hover {
 
 
 
+
+
 /* resources page styling */
+
+#resources-content {
+    font-size: 1.5em;
+}
+
+#resources-list {
+    font-size: 1em;
+}
+
 
 
 
 /* about page styling */
+
 /*#about-content {
     float: left;
     margin-left: 5%;
@@ -218,14 +249,13 @@ tr:nth-child(odd) {background: #D1EDD4}
 .btn {
     display: inline-block;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     vertical-align: middle;
 
     outline: none;
 
-    width: 30vw;
-    height: 8vh;
-    margin-bottom: 1vh;
+    /*height: 8vh;*/
+    padding: .8em;
 
     cursor: pointer;
 

@@ -7,5 +7,6 @@ $(function() {
     $('.nav-item').on('click', function() {
         $('.content').hide();
         $('#' + this.id + '-content').fadeIn(DELAY);
+        resetLookup();
     });
 });

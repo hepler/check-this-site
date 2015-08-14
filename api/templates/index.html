@@ -42,7 +42,7 @@
             <div class="nav-item" id="lookup">
                 <i class="fa fa-search fa nav-icon"></i>
                 <p>
-                    Lookup a Site
+                    Look Up a Site
                 </p>
             </div>
         </div>
@@ -54,14 +54,21 @@
         <div class="wrapper">
 
             <div id="lookup-content" class="content">
-                <div class="left-panel">
-                    <input id="lookup-site" class="input-text top-buffer" name="input" placeholder="lookup website">
-                    <br/>
-                    <button id="lookup-btn" class="btn btn-green wide top-buffer">CHECK THIS SITE</button>
+
+                <div class="left-panel clear-bg">
+                    <div id="lookup-header">
+                        Learn about the security practices of the websites that you use.<br/> Type the URL into the magical box. Hooray.
+                    </div>
+
+                    <div id="lookup-form">
+                        <input id="lookup-site" class="input-text top-buffer" name="input" placeholder="look up a website">
+                        <br/>
+                        <button id="lookup-btn" class="btn btn-green wide top-buffer">CHECK THIS SITE</button>
+                    </div>
                 </div>
 
-                <div class="right-panel">
-                    <div id="lookupheader"></div>
+                <div class="right-panel box-shadow-full hidden" id="site-report">
+
 
 
             		<!-- pre loader -->
@@ -71,10 +78,10 @@
 
 
                     <!-- display either site stats or the "add site" view -->
-                    <div id="site-report">
+                    <!-- <div id="site-report"> -->
 
             			<div id="site-info-header" class="info-wrapper hidden">
-            		        <div id="site-info" class="box-shadow">
+            		        <div id="site-info" class="box-shadow-inset">
             					<div id="site-name"></div>
             					<div id="site-logo">
             						<img id="logo" src="">
@@ -86,40 +93,40 @@
                         <!-- site info found successfully -->
                         <div id="success" class="hidden">
             	        <div id="site-report" class="info-wrapper">
-            	            <div id="sms" class="report-item box-shadow">
+            	            <div id="sms" class="report-item box-shadow-inset">
             	                <span>SMS</span>
             	                <span class="support"></span>
             	            </div>
-            	            <div id="phone_call" class="report-item box-shadow">
+            	            <div id="phone_call" class="report-item box-shadow-inset">
             	                <span>Phone Call</span>
             	                <span class="support"></span>
             	            </div>
-            	            <div id="email" class="report-item box-shadow">
+            	            <div id="email" class="report-item box-shadow-inset">
             	                <span>Email</span>
             	                <span class="support"></span>
             	            </div>
-            	            <div id="hardware_token" class="report-item box-shadow">
+            	            <div id="hardware_token" class="report-item box-shadow-inset">
             	                <span>Hardware Token</span>
             	                <span class="support"></span>
             	            </div>
-            	            <div id="software_implementation" class="report-item box-shadow">
+            	            <div id="software_implementation" class="report-item box-shadow-inset">
             	                <span>Software</span>
             	                <span class="support"></span>
             	            </div>
-            				<div id="sha_status" class="last report-item box-shadow">
+            				<div id="sha_status" class="last report-item box-shadow-inset">
             	                <span>SHA-2 Encryption</span>
             	                <span class="support"></span>
             	            </div>
             	        </div>
                         <div id="no-mfa" class="hidden">
-                            <a class="btn btn-red wide" href="" target="_blank"><i class="fa fa-twitter fa-2x"></i> Tell them to support MFA!</a>
+                            <a class="btn btn-red wide" href="" target="_blank"><i class="fa fa-twitter fa-lg"></i> Tell them to support MFA!</a>
                         </div>
                         </div>
 
 
                         <!-- no site data found -->
                         <div id="no-success" class="info-wrapper hidden">
-                        <div id="no-data" class="report-item box-shadow">
+                        <div id="no-data" class="report-item box-shadow-inset">
             	            <h1><i>oh no!</i></h1>
                             <p>
                                 Looks like we don't have <br/>data for this site yet.
@@ -129,12 +136,12 @@
                                 Click the button above to <br/>submit this site.
                             </p>
             	        </div>
-                        <div id="submitted" class="hidden last report-item box-shadow">
+                        <div id="submitted" class="hidden last report-item box-shadow-inset">
                             Thank you for submitting!
                         </div>
                         </div>
 
-                    </div>
+                    <!-- </div> -->
                 </div>
 
             </div>
@@ -142,16 +149,18 @@
 
             <div id="resources-content" class="content">
                 <div class="left-panel">
-                    this is the left panel!
+                    'Is It Safe' browser extension <br/>
+                    <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" target="_blank">
+                        <i class="fa fa-chrome"></i> Chrome
+                    </a> <br/>
+
+                    <a href="#" target="_blank">
+                        <i class="fa fa-firefox"></i> Firefox
+                    </a> <br/>
                 </div>
 
-                <div class="right-panel">
-                    <ul>
-                        <li>
-                            <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" target="_blank">
-                                'Is It Safe' browser extension for Google Chrome
-                            </a>
-                        </li>
+                <div class="right-panel clear-bg">
+                    <ul id="resources-list">
                         <li>
                             <a href="https://www.twofactorauth.org" target="_blank">
                                 Two Factor Auth
@@ -180,7 +189,7 @@
 
 
             <div id="about-content" class="content">
-                <div class="left-panel">
+                <div class="left-panel clear-bg">
                     <h3>
                         MULTI-FACTOR AUTHENTICATION
                     </h3>
@@ -200,7 +209,8 @@
                 </div>
 
                 <div class="right-panel">
-                    this is the right panel!
+                    this is the right panel! <br/><br/>
+                    
                 </div>
             </div>
 

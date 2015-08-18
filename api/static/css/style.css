@@ -15,7 +15,7 @@ body {
     color: #0C5215;
 }
 
-header {
+.header {
     text-align: center;
     margin: 0 0 -1vh -2vw;
     padding: 0;
@@ -51,7 +51,7 @@ a:hover {
     width: 100%;
 
     font-size: 1.2em;
-    background: rgba(255,255,255,.5);
+    background: rgba(255,255,255,.9);
     margin: 0;
 
     -moz-box-shadow: 1px 1px 10px 1px grey;
@@ -91,10 +91,10 @@ a:hover {
 /* general page styling */
 
 .wrapper {
-    width: 90vw;
+    width: 95vw;
+    height: 60vh;
     margin: 0 auto;
     /*background-color: #bcbcbc;*/
-    height: 50%;
 }
 
 .left-panel {
@@ -143,7 +143,7 @@ a:hover {
 
 .input-text {
     height: 7vh;
-    width: 77%;
+    width: 70%;
     margin-left: .1vw;
     font-size: 2em;
     padding: 0 .3em;
@@ -151,29 +151,50 @@ a:hover {
 
 
 
-
-
 /* resources page styling */
 
 #resources-content {
     font-size: 1.5em;
+    margin-top: 10vh;
 }
 
 #resources-list {
     font-size: 1em;
 }
 
+#resources-list li {
+    margin: 2vh 0;
+}
 
+.browser-ext {
+    font-size: 2em;
+    float: left;
+    width: 45%;
+    text-align: center;
+}
 
 
 /* about page styling */
 
-/*#about-content {
-    float: left;
-    margin-left: 5%;
-    width: 55%;
-    display: block;
-}*/
+#about-content {
+    width: 100%;
+    text-align: center;
+    /*overflow-y: scroll;*/
+    /*height: 55vh;*/
+}
+
+#mfa-diagram {
+    width: 87vw;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#mfa-explanation {
+    padding:10px;
+    width: 87%;
+    display: inline-block;
+    text-align: left;
+}
 
 
 
@@ -251,10 +272,11 @@ tr:nth-child(odd) {background: #D1EDD4}
     text-align: center;
     font-size: 1.2em;
     vertical-align: middle;
+    width: 50%;
+    height: 8vh;
 
     outline: none;
 
-    /*height: 8vh;*/
     padding: .8em;
 
     cursor: pointer;
@@ -290,7 +312,11 @@ tr:nth-child(odd) {background: #D1EDD4}
 }
 
 .wide {
-    width: 80%;
+    width: 65%;
+}
+
+.small {
+    width: 8%;
 }
 
 .btn:hover {

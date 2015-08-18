@@ -20,28 +20,26 @@ var currentSite;
 // Get the active site in the user's open browser window
 // and use it to put together the extension.
 $(function() {
-$('#lookup-btn').on('click', function() {
-    resetLookup();
+    $('#lookup-btn').on('click', function() {
+        // get the site from the user and clean it a little
+        currentSite = $('#lookup-site').val();
+        currentSite = sanitizeString(currentSite);
+        resetLookup();
+        if (currentSite.length <= 0) {
+            alert('Please enter a valid site.');
+        } else {
+            createSiteReport();
+        }
+    });
 
+    $('#lookup-reset-btn').on('click', function() {
+        resetLookup();
+    });
+});
+
+// look up the given site and create a report for it
+function createSiteReport() {
     $('#site-report').removeClass('hidden');
-
-    currentSite = $('#lookup-site').val();
-
-    // CLEAN AND SANITIZE THE CURRENT SITE USER INPUT!!!!!!!
-
-
-    // var tab;
-    // if (tabs.length) {
-    //     tab = tabs[0];
-    // } else {
-    //     return;
-    // }
-
-    // Get domain from url
-    // http://stackoverflow.com/questions/8498592/extract-root-domain-name-from-string
-    // var tmp = document.createElement('a');
-    // tmp.href = tab.url
-    // currentSite = tmp.href;
 
     // Query the API for this site. If there is data, display the stats.
     // If there isn't data for the site, show the "add site" button
@@ -132,8 +130,7 @@ $('#lookup-btn').on('click', function() {
             $('#loading').addClass('hidden');
         }
     });
-});
-});
+}
 
 // handle button clicks for 'add site' button
 // and use it to put together the extension.
@@ -161,7 +158,7 @@ function addSite() {
 
 // reset the lookup functionality after a search
 function resetLookup() {
-    // $('#lookup-site').val('');
+    $('#lookup-site').val('');
 
     $('#site-report').addClass('hidden');
     $('#site-info-header').addClass('hidden');
@@ -169,4 +166,12 @@ function resetLookup() {
     $('#no-success').addClass('hidden');
     $('#submitted').addClass('hidden');
     $('#no-mfa').addClass('hidden');
+}
+
+// Some basic input cleaning client-side. The heavy sanitization
+// will happen server side if they attempt to add a site.
+// http://stackoverflow.com/questions/23187013/is-there-a-better-way-to-sanitize-input-with-javascript
+function sanitizeString(str){
+    str = str.replace(/[^a-z0-9áéíóúñü \.,_-]/gim,"");
+    return str.trim();
 }

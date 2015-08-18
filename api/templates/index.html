@@ -7,7 +7,9 @@
         {% load staticfiles %}
         <link href="{% static 'img/favicon.ico' %}" type="image/x-icon" rel="icon">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"> -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" type="text/css" href="{% static 'css/lookup.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
@@ -16,6 +18,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/lookup.js' %}"></script>
+
 
     </head>
 
@@ -49,23 +52,27 @@
             </div>
         </div>
 
-        <header>
-            <i>CHECK THIS SITE</i>
-        </header>
-
         <div class="wrapper">
 
+
+            <!--
+            LOOKUP SECTION
+            -->
             <div id="lookup-content" class="content">
+                <div class="header">
+                    <i>CHECK THIS SITE</i>
+                </div>
 
                 <div class="left-panel clear-bg">
                     <div id="lookup-header">
-                        Learn about the security practices of the websites that you use.<br/> Type the URL into the magical box. Hooray.
+                        Learn about the security practices<br/>of the websites that you use.<br/>
                     </div>
 
                     <div id="lookup-form">
                         <input id="lookup-site" class="input-text top-buffer" name="input" placeholder="look up a website">
                         <br/>
                         <button id="lookup-btn" class="btn btn-green wide top-buffer">CHECK THIS SITE</button>
+                        <button id="lookup-reset-btn" class="btn btn-blue small top-buffer"><i class="fa fa-refresh"></i></button>
                     </div>
                 </div>
 
@@ -149,19 +156,34 @@
             </div>
 
 
+            <!--
+            RESOURCES SECTION
+            -->
             <div id="resources-content" class="content">
-                <div class="left-panel">
-                    'Is It Safe' browser extension <br/>
-                    <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" target="_blank">
-                        <i class="fa fa-chrome"></i> Chrome
-                    </a> <br/>
 
-                    <a href="#" target="_blank">
-                        <i class="fa fa-firefox"></i> Firefox
-                    </a> <br/>
+                <div class="left-panel clear-bg top-buffer">
+                    <p>
+                        Check the security of the sites you use right from your browser with the <b><i>Is It Safe?</i></b> browser extension.
+                    </p>
+                    <p>
+                        Available for:
+                    </p>
+                    <div>
+                        <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" class="browser-ext" target="_blank">
+                            <i class="fa fa-chrome"></i> Chrome
+                        </a>
+
+                        <!-- <a href="#" class="browser-ext" target="_blank">
+                            <i class="fa fa-firefox"></i> Firefox
+                        </a> -->
+                    </div>
+
                 </div>
 
                 <div class="right-panel clear-bg">
+                <p style="text-align:center;">
+                    HELPFUL LINKS
+                </p>
                     <ul id="resources-list">
                         <li>
                             <a href="https://www.twofactorauth.org" target="_blank">
@@ -190,8 +212,15 @@
             </div>
 
 
+            <!--
+            ABOUT SECTION
+            -->
             <div id="about-content" class="content">
-                <div class="left-panel clear-bg">
+
+                <!-- <div class="left-panel clear-bg"> -->
+
+
+                <div id="mfa-explanation" class="clear-bg">
                     <h3>
                         MULTI-FACTOR AUTHENTICATION
                     </h3>
@@ -210,9 +239,14 @@
                     </p>
                 </div>
 
-                <div class="right-panel">
-                    this is the right panel!
-                </div>
+                <!-- <br/>
+                <i class="fa fa-arrow-down fa-4x"></i>
+                <br/> -->
+
+
+                <!-- <div class="right-panel">
+                    the right panel!
+                </div> -->
             </div>
 
 

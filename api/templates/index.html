@@ -7,7 +7,6 @@
         {% load staticfiles %}
         <link href="{% static 'img/favicon.ico' %}" type="image/x-icon" rel="icon">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <!-- <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"> -->
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -18,7 +17,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/lookup.js' %}"></script>
-
 
     </head>
 
@@ -31,7 +29,6 @@
             </a>
 
             <!-- right side -->
-
             <div class="nav-item" id="about">
                 <i class="fa fa-question fa nav-icon"></i>
                 <p>
@@ -53,8 +50,6 @@
         </div>
 
         <div class="wrapper">
-
-
             <!--
             LOOKUP SECTION
             -->
@@ -77,30 +72,23 @@
                 </div>
 
                 <div class="right-panel box-shadow-full hidden" id="site-report">
-
-
-
             		<!-- pre loader -->
             		<div id="loading">
             			<i class="fa fa-cog fa-spin fa-5x"></i>
             		</div>
 
-
                     <!-- display either site stats or the "add site" view -->
-                    <!-- <div id="site-report"> -->
+        			<div id="site-info-header" class="info-wrapper hidden">
+        		        <div id="site-info" class="box-shadow-inset">
+        					<div id="site-name"></div>
+        					<div id="site-logo">
+        						<img id="logo" src="">
+        					</div>
+        				</div>
+        	        </div>
 
-            			<div id="site-info-header" class="info-wrapper hidden">
-            		        <div id="site-info" class="box-shadow-inset">
-            					<div id="site-name"></div>
-            					<div id="site-logo">
-            						<img id="logo" src="">
-            					</div>
-            				</div>
-            	        </div>
-
-
-                        <!-- site info found successfully -->
-                        <div id="success" class="hidden">
+                    <!-- site info found successfully -->
+                    <div id="success" class="hidden">
             	        <div id="site-report" class="info-wrapper">
             	            <div id="sms" class="report-item box-shadow-inset">
             	                <span>SMS</span>
@@ -130,11 +118,10 @@
                         <div id="no-mfa" class="hidden">
                             <a class="btn btn-red wide" href="" target="_blank"><i class="fa fa-twitter fa-lg"></i> Tell them to support MFA!</a>
                         </div>
-                        </div>
+                    </div>
 
-
-                        <!-- no site data found -->
-                        <div id="no-success" class="info-wrapper hidden">
+                    <!-- no site data found -->
+                    <div id="no-success" class="info-wrapper hidden">
                         <div id="no-data" class="report-item box-shadow-inset">
             	            <h1><i>oh no!</i></h1>
                             <p>
@@ -148,11 +135,8 @@
                         <div id="submitted" class="hidden last report-item box-shadow-inset">
                             Thank you for submitting!
                         </div>
-                        </div>
-
-                    <!-- </div> -->
+                    </div>
                 </div>
-
             </div>
 
 
@@ -168,7 +152,7 @@
                     <p>
                         Available for:
                     </p>
-                    <div>
+                    <div style="text-align:center;">
                         <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" class="browser-ext" target="_blank">
                             <i class="fa fa-chrome"></i> Chrome
                         </a>
@@ -177,7 +161,6 @@
                             <i class="fa fa-firefox"></i> Firefox
                         </a> -->
                     </div>
-
                 </div>
 
                 <div class="right-panel clear-bg">
@@ -207,8 +190,6 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
 
 
@@ -217,10 +198,7 @@
             -->
             <div id="about-content" class="content">
 
-                <!-- <div class="left-panel clear-bg"> -->
-
                 <img src="{% static 'img/mfa-diagram.png' %}" alt="diagram of MFA" id="mfa-diagram">
-
 
                 <div id="mfa-explanation" class="clear-bg">
                     <h3>
@@ -240,18 +218,7 @@
                         For example, a site may send a text message directly to your phone. This message contains a short number that you then enter into the website as part of the login process. Because identity thiefs don't have your phone, they won't know the number to enter and can't access your account!
                     </p>
                 </div>
-
-                <!-- <br/>
-                <i class="fa fa-arrow-down fa-4x"></i>
-                <br/> -->
-
-
-                <!-- <div class="right-panel">
-                    the right panel!
-                </div> -->
             </div>
-
-
         </div> <!-- end wrapper -->
 
     </body>

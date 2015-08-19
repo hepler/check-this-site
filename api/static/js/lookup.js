@@ -17,8 +17,7 @@ var LOGO = '#logo';
 
 var currentSite;
 
-// Get the active site in the user's open browser window
-// and use it to put together the extension.
+// Handle the button clicks on the lookup page
 $(function() {
     $('#lookup-btn').on('click', function() {
         // get the site from the user and clean it a little
@@ -32,19 +31,32 @@ $(function() {
         }
     });
 
+    // reset the look up feature, and show a nice spinning cog while doing so
     $('#lookup-reset-btn').on('click', function() {
+        $('#lookup-reset-btn').html('<i class="fa fa-cog fa-spin"></i>');
         resetLookup();
+        setTimeout(clearRefreshButtonSpinner, 350);
+
     });
 });
 
+// When the reset button is clicked, it shows a spinning gear.
+// This sets it back to the refresh icon.
+function clearRefreshButtonSpinner(){
+    $('#lookup-reset-btn').html('<i class="fa fa-refresh"></i>');
+}
+
+// Get the active site in the user's open browser window
+// and use it to put together the extension.
 // look up the given site and create a report for it
 function createSiteReport() {
     $('#site-report').removeClass('hidden');
 
     // Query the API for this site. If there is data, display the stats.
     // If there isn't data for the site, show the "add site" button
+    console.log('crete the report');
     var request = $.ajax({
-      url: 'http://localhost:8000/api/organization/',
+      url: 'https://young-castle-3686.herokuapp.com/api/organization/',
       type: 'GET',
       data: {search : currentSite.replace('www.', '')},
       dataType: 'json'
@@ -146,12 +158,13 @@ function addSite() {
 
     // send a new "add site" request
     var request = $.ajax({
-        url: 'http://localhost:8000/add_site/',
+        url: 'https://young-castle-3686.herokuapp.com/add_site/',
         type: 'POST',
         data: {'site': currentSite},
         success: function(resp) {
             $('#no-data').addClass('hidden');
             $('#submitted').removeClass('hidden');
+            $('#add-site').html('<i class="fa fa-plus fa-lg"></i> add this site');
         }
     });
 }

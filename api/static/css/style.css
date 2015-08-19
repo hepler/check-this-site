@@ -94,21 +94,18 @@ a:hover {
     width: 95vw;
     height: 60vh;
     margin: 0 auto;
-    /*background-color: #bcbcbc;*/
 }
 
 .left-panel {
     float: left;
     width: 50%;
     padding: 1em;
-    /*background-color: #cdcdcd;*/
 }
 
 
 .right-panel {
     float: right;
     width: 40%;
-    /*font-size: 1.4vw;*/
 }
 
 .box-shadow-full {
@@ -129,16 +126,13 @@ a:hover {
 
 #lookup-header {
     width: 100%;
-    /*background-color: orange;*/
     font-size: 1.5em;
     text-align: center;
     margin: 2vh 0;
 }
 
 #lookup-form {
-    /*margin: 0 5vw;*/
     text-align: center;
-    /*width: 40vw;*/
 }
 
 .input-text {
@@ -148,7 +142,6 @@ a:hover {
     font-size: 2em;
     padding: 0 .3em;
 }
-
 
 
 /* resources page styling */
@@ -171,6 +164,14 @@ a:hover {
     float: left;
     width: 45%;
     text-align: center;
+    border: 1px solid #788E77;
+    border-radius: 2px;
+    padding: 2px;
+    margin: 0 10px;
+}
+
+.browser-ext:hover {
+    background: rgba(0,0,0,0.1);
 }
 
 
@@ -179,8 +180,6 @@ a:hover {
 #about-content {
     width: 100%;
     text-align: center;
-    /*overflow-y: scroll;*/
-    /*height: 55vh;*/
 }
 
 #mfa-diagram {
@@ -195,8 +194,6 @@ a:hover {
     display: inline-block;
     text-align: left;
 }
-
-
 
 
 /*
@@ -273,7 +270,6 @@ tr:nth-child(odd) {background: #D1EDD4}
     font-size: 1.2em;
     vertical-align: middle;
     width: 50%;
-    height: 8vh;
 
     outline: none;
 
@@ -336,16 +332,12 @@ i {
     vertical-align: middle;
 }
 
-.fa-search {
-    color: #0C5215;
+.fa-chrome {
+    margin-top: -10px;
 }
 
-.fa-book {
-    color: #0C5215;
-}
-
-.fa-question {
-    color: #0C5215;
+.fa-firefox {
+    margin-top: -10px;
 }
 
 .nav-icon {

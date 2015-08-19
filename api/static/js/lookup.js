@@ -56,7 +56,7 @@ function createSiteReport() {
     // If there isn't data for the site, show the "add site" button
     console.log('crete the report');
     var request = $.ajax({
-      url: 'https://young-castle-3686.herokuapp.com/api/organization/',
+      url: 'http://www.checkthis.site/api/organization/',
       type: 'GET',
       data: {search : currentSite.replace('www.', '')},
       dataType: 'json'
@@ -158,7 +158,7 @@ function addSite() {
 
     // send a new "add site" request
     var request = $.ajax({
-        url: 'https://young-castle-3686.herokuapp.com/add_site/',
+        url: 'http://www.checkthis.site/add_site/',
         type: 'POST',
         data: {'site': currentSite},
         success: function(resp) {

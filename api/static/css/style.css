@@ -15,10 +15,11 @@ body {
     color: #0C5215;
 }
 
-header {
+.header {
     text-align: center;
-    margin-left: -2vw;
-    font-size: 12vw;
+    margin: 0 0 -1vh -2vw;
+    padding: 0;
+    font-size: 10em;
     font-weight: bolder;
     color: #FFFFFF;
 }
@@ -32,6 +33,15 @@ a:hover {
     color: white;
 }
 
+.top-buffer {
+    margin-top: 2vh;
+}
+
+.hidden {
+    display: none;
+}
+
+
 /*
  * NAVIGATION BAR
  */
@@ -41,10 +51,8 @@ a:hover {
     width: 100%;
 
     font-size: 1.2em;
-    background: rgba(255,255,255,0.3);
-    /*background-color: white;*/
-    /*border-bottom: 2px solid grey;*/
-    margin:0;
+    background: rgba(255,255,255,.9);
+    margin: 0;
 
     -moz-box-shadow: 1px 1px 10px 1px grey;
     -webkit-box-shadow: 1px 1px 10px 1px grey;
@@ -58,6 +66,8 @@ a:hover {
     text-align: center;
     float: right;
     display: inline-block;
+    cursor: pointer;
+    border-left: 1px solid #dedede;
 }
 
 .nav-item p {
@@ -75,47 +85,115 @@ a:hover {
 }
 
 /*
- * INDEX, "more info" page
+ * PAGE STYLES
  */
 
- .wrapper {
-     width: 100vw;
-     margin: 0 auto;
- }
+/* general page styling */
 
- .left-panel {
-     float: left;
-     width: 40%;
-     background-color: #cdcdcd;
- }
-
-
- .right-panel {
-     float: right;
-     width: 40%;
-     background: rgba(0,0,0,0.1);
-
-     -moz-box-shadow: 1px 3px 10px 1px grey;
-     -webkit-box-shadow: 1px 3px 10px 1px grey;
-     box-shadow: 1px 3px 10px 2px grey;
-
-     border-top-left-radius: 5px;
-     border-bottom-left-radius: 5px;
- }
-
-
-#toggleDiv {
-    width: 15%;
-    height: 45vh;
-
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-
-    position: absolute;
-    display: inline-block;
-    top: 0; left: 0;
+.wrapper {
+    width: 95vw;
+    height: 60vh;
+    margin: 0 auto;
 }
 
+.left-panel {
+    float: left;
+    width: 50%;
+    padding: 1em;
+}
+
+
+.right-panel {
+    float: right;
+    width: 40%;
+}
+
+.box-shadow-full {
+    -moz-box-shadow: 1px 3px 10px 1px grey;
+    -webkit-box-shadow: 1px 3px 10px 1px grey;
+    box-shadow: 1px 3px 10px 2px grey;
+
+    border-radius: 5px;
+}
+
+.clear-bg {
+    background: rgba(0,0,0,0.07);
+    border-radius: 5px;
+}
+
+
+/* lookup page styling */
+
+#lookup-header {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 2vh 0;
+}
+
+#lookup-form {
+    text-align: center;
+}
+
+.input-text {
+    height: 7vh;
+    width: 70%;
+    margin-left: .1vw;
+    font-size: 2em;
+    padding: 0 .3em;
+}
+
+
+/* resources page styling */
+
+#resources-content {
+    font-size: 1.5em;
+    margin-top: 10vh;
+}
+
+#resources-list {
+    font-size: 1em;
+}
+
+#resources-list li {
+    margin: 2vh 0;
+}
+
+.browser-ext {
+    font-size: 2em;
+    float: left;
+    width: 45%;
+    text-align: center;
+    border: 1px solid #788E77;
+    border-radius: 2px;
+    padding: 2px;
+    margin: 0 10px;
+}
+
+.browser-ext:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+
+/* about page styling */
+
+#about-content {
+    width: 100%;
+    text-align: center;
+}
+
+#mfa-diagram {
+    width: 87vw;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#mfa-explanation {
+    padding:10px;
+    width: 87%;
+    display: inline-block;
+    text-align: left;
+}
 
 
 /*
@@ -189,15 +267,13 @@ tr:nth-child(odd) {background: #D1EDD4}
 .btn {
     display: inline-block;
     text-align: center;
-    font-size: 14px;
+    font-size: 1.2em;
     vertical-align: middle;
-    line-height: 40px;
+    width: 50%;
 
     outline: none;
 
-    width: 48%;
-    height: 40px;
-    margin-bottom: 10px;
+    padding: .8em;
 
     cursor: pointer;
 
@@ -231,8 +307,12 @@ tr:nth-child(odd) {background: #D1EDD4}
     background-color: #91B8D8;
 }
 
-.wide{
-    width: 98%;
+.wide {
+    width: 65%;
+}
+
+.small {
+    width: 8%;
 }
 
 .btn:hover {
@@ -252,24 +332,12 @@ i {
     vertical-align: middle;
 }
 
-.fa-check {
-    color: green;
+.fa-chrome {
+    margin-top: -10px;
 }
 
-.fa-ban {
-    color: red;
-}
-
-.fa-search {
-    color: #0C5215;
-}
-
-.fa-book {
-    color: #0C5215;
-}
-
-.fa-question {
-    color: #0C5215;
+.fa-firefox {
+    margin-top: -10px;
 }
 
 .nav-icon {

@@ -1,0 +1,147 @@
+/*
+ * MAIN EXTENSION PAGE
+ */
+
+
+.box-shadow-inset {
+    box-shadow: inset 1px 1px 5px #999;
+}
+
+#site-report {
+    margin: 0 auto;
+
+
+}
+
+/*
+ * header
+ */
+
+/*#lookup-header {
+    margin: 0 0 10px 0;
+}*/
+
+
+/*
+ * pre-load
+ */
+
+#loading {
+    text-align: center;
+    margin: 10vh;
+}
+
+/*
+ * site info section
+ */
+
+/*#site-info-header {
+    width: 100%;
+}*/
+
+#site-info {
+    margin: 0 auto;
+    height: 6vh;
+    padding: 1vh 0 2vh 0;
+    background-color: #cdcdcd;
+}
+
+#site-logo {
+    float: right;
+    width: 20%;
+    padding: 1vh 1vw;
+    text-align: center;
+}
+
+#logo {
+    width: 3vw;
+}
+
+#site-name {
+    float: left;
+    max-width: 75%;
+    padding: 1vh 0 1vh 2vw;
+    font-size: 2em;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.info-wrapper {
+    border: 1px solid;
+    border-color: #ababab;
+    border-radius: 3px;
+    padding: 0.15em;
+    margin-bottom: 2vh;
+}
+
+#no-mfa {
+    margin: 1vh 0 1vh 0;
+    text-align: center;
+
+    /*margin-bottom: 5px;*/
+    /* change this px to vh!!! */
+}
+
+
+/*
+ * report section entry
+ */
+
+.report-item {
+    background-color: #cdcdcd;
+    margin: 0 0 .5vh 0;
+    padding: 0.5em;
+
+    text-align: left;
+    line-height: 1.3em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.last {
+    margin: 0;
+}
+
+.report-item span {
+    padding: 0 .5em 0 1em;
+}
+
+.support {
+    float: right;
+    margin-top: -5px;
+}
+
+
+/*
+ * no info page
+ */
+
+#submitted {
+    text-align: center;
+    padding: 15px 0;
+}
+
+#no-data {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#no-data h1 {
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+
+/*
+ * icons
+ */
+
+.fa-check {
+    color:green;
+}
+
+.fa-ban {
+    color:red;
+}

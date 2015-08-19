@@ -7,13 +7,16 @@
         {% load staticfiles %}
         <link href="{% static 'img/favicon.ico' %}" type="image/x-icon" rel="icon">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/lookup.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
         <!-- load scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/lookup.js' %}"></script>
 
     </head>
 
@@ -26,7 +29,6 @@
             </a>
 
             <!-- right side -->
-
             <div class="nav-item" id="about">
                 <i class="fa fa-question fa nav-icon"></i>
                 <p>
@@ -42,41 +44,130 @@
             <div class="nav-item" id="lookup">
                 <i class="fa fa-search fa nav-icon"></i>
                 <p>
-                    Lookup a Site
+                    Look Up a Site
                 </p>
             </div>
         </div>
 
-        <header>
-            <i>CHECK THIS SITE</i>
-        </header>
-
         <div class="wrapper">
-
+            <!--
+            LOOKUP SECTION
+            -->
             <div id="lookup-content" class="content">
-                <div class="left-panel">
-                    left panel
+                <div class="header">
+                    <i>CHECK THIS SITE</i>
                 </div>
 
-                <div class="right-panel">
-                    right panel
+                <div class="left-panel clear-bg">
+                    <div id="lookup-header">
+                        Learn about the security practices<br/>of the websites that you use.<br/>
+                    </div>
+
+                    <div id="lookup-form">
+                        <input id="lookup-site" class="input-text top-buffer" name="input" placeholder="look up a website">
+                        <br/>
+                        <button id="lookup-btn" class="btn btn-green wide top-buffer">CHECK THIS SITE</button>
+                        <button id="lookup-reset-btn" class="btn btn-blue small top-buffer"><i class="fa fa-refresh"></i></button>
+                    </div>
                 </div>
 
+                <div class="right-panel box-shadow-full hidden" id="site-report">
+            		<!-- pre loader -->
+            		<div id="loading">
+            			<i class="fa fa-cog fa-spin fa-5x"></i>
+            		</div>
+
+                    <!-- display either site stats or the "add site" view -->
+        			<div id="site-info-header" class="info-wrapper hidden">
+        		        <div id="site-info" class="box-shadow-inset">
+        					<div id="site-name"></div>
+        					<div id="site-logo">
+        						<img id="logo" src="">
+        					</div>
+        				</div>
+        	        </div>
+
+                    <!-- site info found successfully -->
+                    <div id="success" class="hidden">
+            	        <div id="site-report" class="info-wrapper">
+            	            <div id="sms" class="report-item box-shadow-inset">
+            	                <span>SMS</span>
+            	                <span class="support"></span>
+            	            </div>
+            	            <div id="phone_call" class="report-item box-shadow-inset">
+            	                <span>Phone Call</span>
+            	                <span class="support"></span>
+            	            </div>
+            	            <div id="email" class="report-item box-shadow-inset">
+            	                <span>Email</span>
+            	                <span class="support"></span>
+            	            </div>
+            	            <div id="hardware_token" class="report-item box-shadow-inset">
+            	                <span>Hardware Token</span>
+            	                <span class="support"></span>
+            	            </div>
+            	            <div id="software_implementation" class="report-item box-shadow-inset">
+            	                <span>Software</span>
+            	                <span class="support"></span>
+            	            </div>
+            				<div id="sha_status" class="last report-item box-shadow-inset">
+            	                <span>SHA-2 Encryption</span>
+            	                <span class="support"></span>
+            	            </div>
+            	        </div>
+                        <div id="no-mfa" class="hidden">
+                            <a class="btn btn-red wide" href="" target="_blank"><i class="fa fa-twitter fa-lg"></i> Tell them to support MFA!</a>
+                        </div>
+                    </div>
+
+                    <!-- no site data found -->
+                    <div id="no-success" class="info-wrapper hidden">
+                        <div id="no-data" class="report-item box-shadow-inset">
+            	            <h1><i>oh no!</i></h1>
+                            <p>
+                                Looks like we don't have <br/>data for this site yet.
+                            </p>
+                            <div id="add-site" class="btn btn-blue wide"><i class="fa fa-plus fa-lg"></i> add this site</div>
+                            <p>
+                                Click the button above to <br/>submit this site.
+                            </p>
+            	        </div>
+                        <div id="submitted" class="hidden last report-item box-shadow-inset">
+                            Thank you for submitting!
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
+            <!--
+            RESOURCES SECTION
+            -->
             <div id="resources-content" class="content">
-                <div class="left-panel">
-                    left panel
+
+                <div class="left-panel clear-bg top-buffer">
+                    <p>
+                        Check the security of the sites you use right from your browser with the <b><i>Is It Safe?</i></b> browser extension.
+                    </p>
+                    <p>
+                        Available for:
+                    </p>
+                    <div style="text-align:center;">
+                        <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" class="browser-ext" target="_blank">
+                            <i class="fa fa-chrome"></i> Chrome
+                        </a>
+
+                        <!-- <a href="#" class="browser-ext" target="_blank">
+                            <i class="fa fa-firefox"></i> Firefox
+                        </a> -->
+                    </div>
                 </div>
 
-                <div class="right-panel">
-                    <ul>
-                        <li>
-                            <a href="https://chrome.google.com/webstore/detail/is-it-safe/jmppobhogabhaifcikcjkilmmclfhdjd" target="_blank">
-                                'Is It Safe' browser extension for Google Chrome
-                            </a>
-                        </li>
+                <div class="right-panel clear-bg">
+                <p style="text-align:center;">
+                    HELPFUL LINKS
+                </p>
+                    <ul id="resources-list">
                         <li>
                             <a href="https://www.twofactorauth.org" target="_blank">
                                 Two Factor Auth
@@ -99,13 +190,17 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
 
 
+            <!--
+            ABOUT SECTION
+            -->
             <div id="about-content" class="content">
-                <div class="left-panel">
+
+                <img src="{% static 'img/mfa-diagram.png' %}" alt="diagram of MFA" id="mfa-diagram">
+
+                <div id="mfa-explanation" class="clear-bg">
                     <h3>
                         MULTI-FACTOR AUTHENTICATION
                     </h3>
@@ -123,13 +218,7 @@
                         For example, a site may send a text message directly to your phone. This message contains a short number that you then enter into the website as part of the login process. Because identity thiefs don't have your phone, they won't know the number to enter and can't access your account!
                     </p>
                 </div>
-
-                <div class="right-panel">
-                    right panel
-                </div>
             </div>
-
-
         </div> <!-- end wrapper -->
 
     </body>

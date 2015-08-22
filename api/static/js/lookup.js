@@ -54,9 +54,8 @@ function createSiteReport() {
 
     // Query the API for this site. If there is data, display the stats.
     // If there isn't data for the site, show the "add site" button
-    console.log('crete the report');
     var request = $.ajax({
-      url: 'http://www.checkthis.site/api/organization/',
+      url: 'http://localhost:8000/api/organization/',
       type: 'GET',
       data: {search : currentSite.replace('www.', '')},
       dataType: 'json'

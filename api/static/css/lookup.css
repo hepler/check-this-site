@@ -14,15 +14,6 @@
 }
 
 /*
- * header
- */
-
-/*#lookup-header {
-    margin: 0 0 10px 0;
-}*/
-
-
-/*
  * pre-load
  */
 
@@ -35,14 +26,10 @@
  * site info section
  */
 
-/*#site-info-header {
-    width: 100%;
-}*/
-
 #site-info {
     margin: 0 auto;
-    height: 6vh;
-    padding: 1vh 0 2vh 0;
+    height: 5vh;
+    padding: 0vh 0 2vh 0;
     background-color: #cdcdcd;
 }
 
@@ -79,9 +66,6 @@
 #no-mfa {
     margin: 1vh 0 1vh 0;
     text-align: center;
-
-    /*margin-bottom: 5px;*/
-    /* change this px to vh!!! */
 }
 
 

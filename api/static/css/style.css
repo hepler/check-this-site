@@ -31,6 +31,12 @@ a {
 
 a:hover {
     color: white;
+
+}
+
+.reference {
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .top-buffer {
@@ -99,7 +105,7 @@ a:hover {
 .left-panel {
     float: left;
     width: 50%;
-    padding: 1em;
+    padding: 0 1em 1em 1em;
 }
 
 
@@ -183,7 +189,7 @@ a:hover {
 }
 
 #mfa-diagram {
-    width: 87vw;
+    width: 80vw;
     display: inline-block;
     margin-top: 20px;
 }
@@ -267,7 +273,7 @@ tr:nth-child(odd) {background: #D1EDD4}
 .btn {
     display: inline-block;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     vertical-align: middle;
     width: 50%;
 

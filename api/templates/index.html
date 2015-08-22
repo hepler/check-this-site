@@ -201,22 +201,28 @@
                 <img src="{% static 'img/mfa-diagram.png' %}" alt="diagram of MFA" id="mfa-diagram">
 
                 <div id="mfa-explanation" class="clear-bg">
-                    <h3>
+                    <div class="left-panel">
                         MULTI-FACTOR AUTHENTICATION
-                    </h3>
-                    <p>
-                        Multi-factor Authentication (MFA) is a way to keep your personal information secure online. By verifying that you are actually you, websites that use MFA help cut down on identity theft and loss of personal data.
-                    </p>
+                        <p>
+                            Multi-factor Authentication (MFA) is a way to keep your personal information secure online. By verifying that you are actually you, websites that use MFA help cut down on identity theft and loss of personal data.
+                        </p>
 
-                    <h3>
-                        WHY AUTHENTICATION?
-                    </h3>
+                        <p>
+                            If a website does not offer MFA, all an identity thief needs to do to gain access to your account is enter your username and password. MFA provides a next step by checking that you -- and only you -- are trying to access your information.
 
-                    <p>
-                        If a website does not offer MFA, all an identity thief needs to do to gain access to your account is enter your username and password. MFA provides a next step by checking that you -- and only you -- are trying to access your information.
+                            For example, a site may send a message directly to your phone asking if you want to log in. Because identity thiefs don't have your phone, they won't be able to access your account!
+                        </p>
+                    </div>
 
-                        For example, a site may send a text message directly to your phone. This message contains a short number that you then enter into the website as part of the login process. Because identity thiefs don't have your phone, they won't know the number to enter and can't access your account!
-                    </p>
+                    <div class="right-panel">
+                        ABOUT CHECKTHIS.SITE
+                        <p>
+                            This project grew out of the <a href="http://hackforchange.org/challenges/two-factor-frenzy/" target="_blank" class="reference">Two Factor Frenzy</a> challenge organized by the <a href="http://www.nist.gov/nstic/" target="_blank" class="reference">National Strategy for Trusted Identities in Cyberspace</a> as part of the 2015 National Day of Civic Hacking.
+                        </p>
+                        <p>
+                            The website report cards generated here and via the browser extension make use of data collected by the <a href="https://twofactorauth.org/" target="_blank" class="reference">Two Factor Auth List</a> project. You can contribute on <a href="https://github.com/jdavis/twofactorauth" target="_blank" class="reference">GitHub</a>, and check out their license <a href="https://github.com/jdavis/twofactorauth/blob/master/LICENSE" target="_blank" class="reference">here</a>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div> <!-- end wrapper -->

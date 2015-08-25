@@ -133,12 +133,11 @@ function createSiteReport() {
             $(LOGO).attr('src', favicon);
 
             // Show the header and no-success div, and hide the pre-loader
-            // $('#add-site').html('<i class="fa fa-plus fa-lg"></i> add this site');
-
             $('#no-data').removeClass('hidden');
             $('#site-info-header').removeClass('hidden');
             $('#no-success').removeClass('hidden');
             $('#loading').addClass('hidden');
+            $('#add-site').css('pointer-events', 'auto');
         }
     });
 }
@@ -152,7 +151,7 @@ $(function() {
 // if the site does not exist, allow the user to submit an "add site" request
 function addSite() {
     // replace button text with spinner
-    document.getElementById('add-site').style.pointerEvents = 'none';
+    $('#add-site').css('pointer-events', 'none');
     $('#add-site').html('<i class="fa fa-cog fa-spin fa-lg"></i>');
 
     // send a new "add site" request

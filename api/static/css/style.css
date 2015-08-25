@@ -166,14 +166,13 @@ a:hover {
 }
 
 .browser-ext {
-    font-size: 2em;
-    float: left;
-    width: 45%;
-    text-align: center;
+    font-size: 1.5em;
     border: 1px solid #788E77;
     border-radius: 2px;
-    padding: 2px;
-    margin: 0 10px;
+    margin: 0 .5em;
+    padding: .25em .5em;
+    display: inline-block;
+    width: 35%;
 }
 
 .browser-ext:hover {
